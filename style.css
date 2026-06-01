@@ -1,3 +1,34 @@
+/* Reset básico */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+
+/* Fondo general */
+
+body{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    background:linear-gradient(
+        135deg,
+        #ffd6e7,
+        #ffeccf
+    );
+
+    font-family:Arial, Helvetica, sans-serif;
+    text-align:center;
+    overflow:hidden;
+}
+
+
+/* Pantallas */
+
 .pantalla{
     display:none;
 }
@@ -6,8 +37,129 @@
     display:block;
 }
 
+
+/* Títulos */
+
+h1{
+    font-size:3rem;
+    margin-bottom:20px;
+}
+
+h2{
+    margin-bottom:25px;
+}
+
+
+/* Texto */
+
+p{
+    font-size:1.2rem;
+    margin-bottom:25px;
+}
+
+
+/* Botones */
+
+button{
+    padding:12px 25px;
+    border:none;
+    border-radius:20px;
+
+    font-size:1rem;
+    cursor:pointer;
+
+    background:white;
+
+    transition:0.3s;
+}
+
+button:hover{
+    transform:scale(1.05);
+}
+
+
+/* SOBRE */
+
+.sobre{
+    width:250px;
+
+    animation:flotar 3s ease-in-out infinite;
+
+    filter:drop-shadow(
+        0px 10px 15px rgba(0,0,0,0.2)
+    );
+
+    cursor:pointer;
+
+    transition:0.4s;
+}
+
+.sobre:hover{
+    transform:scale(1.08);
+}
+
+
+/* CARTA */
+
+.carta{
+    width:80%;
+    max-width:700px;
+
+    border-radius:15px;
+
+    box-shadow:
+    0px 10px 25px rgba(0,0,0,0.2);
+
+    animation:aparecer 1s ease;
+}
+
+
+/* Animación flotante */
+
+@keyframes flotar{
+
+    0%{
+        transform:translateY(0px);
+    }
+
+    50%{
+        transform:translateY(-15px);
+    }
+
+    100%{
+        transform:translateY(0px);
+    }
+
+}
+
+
+/* Desaparece el sobre */
+
 .desaparecer{
+
     opacity:0;
+
     filter:blur(10px);
+
+    transform:scale(1.2);
+
     transition:1s;
+
+}
+
+
+/* Aparición carta */
+
+@keyframes aparecer{
+
+    from{
+        opacity:0;
+        transform:translateY(20px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
 }
