@@ -1,0 +1,13 @@
+.pantalla{
+    display:none;
+}
+
+.activa{
+    display:block;
+}
+
+.desaparecer{
+    opacity:0;
+    filter:blur(10px);
+    transition:1s;
+}
